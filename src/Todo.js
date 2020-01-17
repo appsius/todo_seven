@@ -40,8 +40,8 @@ export default function Todo({
             {task}
           </ListItemText>
           <ListItemSecondaryAction>
-            <IconButton aria-label='Delete' onClick={() => removeTodo(id)}>
-              <DeleteIcon />
+            <IconButton aria-label='Delete'>
+              <DeleteIcon onClick={() => removeTodo(id)} />
             </IconButton>
             <IconButton aria-label='Edit'>
               <EditIcon onClick={toggle} />

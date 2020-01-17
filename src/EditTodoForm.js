@@ -12,6 +12,7 @@ export default function EditTodoForm({ id, task, editTodo, toggleEditForm }) {
         reset();
         toggleEditForm();
       }}
+      style={{ marginLeft: '1rem', width: '80%' }}
     >
       <TextField
         margin='normal'

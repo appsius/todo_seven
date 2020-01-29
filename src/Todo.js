@@ -10,10 +10,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import { DispatchContext } from './contexts/todos.context';
 
-export default memo(function Todo({ id, task, completed }) {
+function Todo({ id, task, completed }) {
   const dispatch = useContext(DispatchContext);
   const [isEditing, toggle] = useToggleState(false);
-  console.log('TODO RE-RENDER: ', id);
 
   return (
     <ListItem style={{ height: '64px' }}>
@@ -45,4 +44,6 @@ export default memo(function Todo({ id, task, completed }) {
       )}
     </ListItem>
   );
-});
+}
+
+export default memo(Todo);
